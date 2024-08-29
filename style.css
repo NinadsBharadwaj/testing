@@ -1,0 +1,22 @@
+#countLabel{
+    display:block;
+    text-align: center;
+    font-size: 10em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#btn-container{
+    text-align: center;
+}
+.buttons{
+    padding: 20px;
+    font-size: 1.5em;
+    color: aliceblue;
+    background-color: lawngreen;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:background-color 0.25px;
+}
+.buttons:hover{
+    background-color: aquamarine;
+}
