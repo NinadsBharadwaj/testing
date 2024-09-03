@@ -1,0 +1,83 @@
+const car={}
+car.name="Fiat";
+car.age=50;
+car.color="White";
+car.price=69699;
+console.log(car)
+
+//Method in js
+const fullname={
+    firstName:"ABCD",
+    lastName:"EFGH",
+    fullName : function(){
+        return this.firstName + " " + this.lastName;
+    }
+}
+document.getElementById("fullName").innerHTML=fullname.fullName();
+delete car.age;
+console.log(car)
+
+//nested objects
+const carcollection={
+    name:"Tata",
+    tataModels:{
+        model1:"Punch",
+        model2:"Altroz",
+        model3:"Harrier",
+
+    },
+    name2:"Mahindra",
+    mahindraModels:{
+        mModel1:"XUV 500"
+    },
+}
+document.getElementById("carModels").innerHTML=carcollection.name+":"+carcollection.tataModels.model1+" , "+carcollection.tataModels.model2+" , "
+        +carcollection.tataModels.model3+"  <br>"+carcollection.name2+":"+carcollection.mahindraModels.mModel1;
+
+//using for loop
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+let text="";
+for(let i in person){
+    text +=person[i]+" ";
+}
+document.getElementById("yeno").innerHTML=text
+
+//using built in objects.value
+const personArray=Object.values(person)
+console.log(personArray)
+
+    //using object.entries
+    const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+    let text2 = "";
+    for (let [fruit, value] of Object.entries(fruits)) {
+    text2 += fruit + ": " + value + "<br>";
+    }
+
+    document.getElementById("fruitVendor").innerHTML=text2;
+
+//using json.stringify()
+
+  // Stringify Object
+  let myString = JSON.stringify(person);
+  // Display String
+  document.getElementById("jsonify").innerHTML = myString;
+
+//usng random function
+let random=Math.random();
+document.getElementById("randomNumber").innerHTML=Math.ceil(random*10);
+
+
+//string manipulation
+let greet="Hello";
+let user="Jhon";
+
+console.log(greet.concat(user));//Hello Jhon
+console.log(greet.charAt(0));//H
+console.log(greet.indexOf("e"))//1
+console.log(greet.split("e"))//['H','llo'] Gives an array
+console.log(greet.lastIndexOf("l"))//3
